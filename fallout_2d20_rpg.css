@@ -1,0 +1,12 @@
+.sheet-char,
+.sheet-equipment,
+.sheet-jour{
+    display: none;
+}
+
+.sheet-tabstoggle[value="char"] ~ div.sheet-char,
+.sheet-tabstoggle[value="equipment"] ~ div.sheet-equipment,
+.sheet-tabstoggle[value="jour"] ~ div.sheet-jour {
+    display: block;
+}
+
