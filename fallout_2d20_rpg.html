@@ -231,35 +231,65 @@
                 <input type="radio" name="attr_discipline" value="@{sneak}" title="@{discipline}">
                 <label>Sneak(AGI)</label>
             </span>
-            <input type="checkbox" name="attr_sneak_tag">
+            <span class="custom-check">
+                <input type="hidden" name="attr_sneak_tag" value="0" class="toggle">
+                <button type="action" name="act_sneak" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_sneak" value="0" min="0" title="@{sneak}">
 
             <span>
                 <input type="radio" name="attr_discipline" value="@{speech}" title="@{discipline}">
                 <label>Speech(CHA)</label>
             </span>
-            <input type="checkbox" name="attr_speech_tag">
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_speech_tag">
+                <button type="action" name="act_speech" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_speech" value="0" min="0" title="@{speech}">
 
             <span>
                 <input type="radio" name="attr_discipline" value="@{surv}" title="@{discipline}">
                 <label>Survival(END)</label>
             </span>
-            <input type="checkbox" name="attr_surv_tag">
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_surv_tag">
+                <button type="action" name="act_surv" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_surv" value="0" min="0" title="@{surv}">
 
             <span>
                 <input type="radio" name="attr_discipline" value="@{throw}" title="@{discipline}">
                 <label>Throwing(AGI)</label>
             </span>
-            <input type="checkbox" name="attr_throw_tag">
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_throw_tag">
+                <button type="action" name="act_throw" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_throw" value="0" min="0" title="@{throw}">
 
             <span>
                 <input type="radio" name="attr_discipline" value="@{unarmed}" title="@{discipline}">
                 <label>Unarmed(STR)</label>
             </span>
-            <input type="checkbox" name="attr_unarmed_tag">
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_unarmed_tag">
+                <button type="action" name="act_unarmed" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_unarmed" value="0" min="0">
         </div>
         <div class="combat">
