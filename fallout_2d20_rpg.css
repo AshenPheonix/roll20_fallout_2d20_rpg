@@ -323,8 +323,10 @@ td input[type="checkbox"] {
 }
 .skillgrid > * {
     height:3rem;
-    border:groove black 1px;
+    border:groove #6fd87c 1px;
     width:max-content;
+    color: #6fd87c;
+    background-color: black;
 }
 .skillgrid>input[type=number]{
     height:3rem !important;
@@ -339,7 +341,6 @@ td input[type="checkbox"] {
 }
 .custom-check button{
     padding:0;
-    border:solid 1px blue;
     cursor: pointer;
 
     width: 2.9rem;
@@ -347,6 +348,7 @@ td input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
 }
 
 .custom-check input.toggle:not([value="1"]) ~ button > span{
