@@ -351,7 +351,10 @@ td input[type="checkbox"] {
     background-color: black;
 }
 
-.custom-check input.toggle:not([value="1"]) ~ button > span{
+.custom-check input.toggle:not([value="1"]) ~ button > span.checkmark{
+    display: none;
+}
+.custom-check input.toggle:not([value="0"]) ~ button > span.notchecked{
     display: none;
 }
 .skillgrid label{

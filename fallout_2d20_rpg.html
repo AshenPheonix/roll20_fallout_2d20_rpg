@@ -89,83 +89,142 @@
                 <input type="hidden" name="attr_ath_tag" value="1" class="toggle">
                 <button type="action" name="act_ath" class="toggle">
                     <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
                 </button>
             </span>
             <input type="number" name="attr_ath" value="0" min="0" title="@{ath}">
 
             <input type="radio" name="attr_discipline" value="@{bar}" title="@{discipline}">
             <label>Barter(CHA)</label>
-            <input type="checkbox" name="attr_bar_tag">
+            <span class="custom-check">
+                <input type="hidden" name="attr_bar_tag" value="0" class="toggle">
+                <button type="action" name="act_bar" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_bar" value="0" min="0" title="${bar}">
 
-            <span>
-                <input type="radio" name="attr_discipline" value="@{big_guns}" title="@{discipline}">
-                <label>Big Guns(END)</label>
+            
+            <input type="radio" name="attr_discipline" value="@{big_guns}" title="@{discipline}">
+            <label>Big Guns(END)</label>
+            <span class="custom-check">
+                <input type="hidden" name="attr_big_guns_tag" value="0" class="toggle">
+                <button type="action" name="act_big_guns" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
             </span>
-            <input type="checkbox" name="attr_big_guns_tag">
             <input type="number" name="attr_big_guns" value="0" min="0" title="@{big_guns}">
             
-            <span>
-                <label>Energy Weapons(PER)</label>
-                <input type="radio" name="attr_discipline" value="@{en_weap}" title="@{discipline}">
+            
+            <input type="radio" name="attr_discipline" value="@{en_weap}" title="@{discipline}">
+            <label>Energy Weapons(PER)</label>
+            <span class="custom-check">
+                <input type="hidden" name="attr_en_weap_tag" value="0" class="toggle">
+                <button type="action" name="act_en_weap" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
             </span>
-            <input type="checkbox" name="attr_en_weap_tag">
             <input type="number" name="attr_en_weap" value="0" min="0" title="@{en_weap}">
             
-            <span>
-                <input type="radio" name="attr_discipline" value="@{explosives}" title="@{discipline}">
-                <label>Explosives(PER)</label>
+            <input type="radio" name="attr_discipline" value="@{explosives}" title="@{discipline}">
+            <label>Explosives(PER)</label>
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_explosives_tag">
+                <button type="action" name="act_explosives" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
             </span>
-            <input type="checkbox" name="attr_explosives_tag">
             <input type="number" name="attr_explosives" value="0" min="0" title="${explosives}">
 
-            <span>
-                <input type="radio" name="attr_discipline" value="@{lockpick}" title="@{discipline}">
-                <label>Lockpick(PER)</label>
+            <input type="radio" name="attr_discipline" value="@{lockpick}" title="@{discipline}">
+            <label>Lockpick(PER)</label>
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_lockpick_tag">
+                <button type="action" name="act_lockpick" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
             </span>
-            <input type="checkbox" name="attr_lockpick_tag">
             <input type="number" name="attr_lockpick" value="0" min="0" title="@{lockpick}">
 
-            <span>
-                <input type="radio" name="attr_discipline" value="@{med}" title="@{discipline}">
-                <label>Medicine(INT)</label>
+            <input type="radio" name="attr_discipline" value="@{med}" title="@{discipline}">
+            <label>Medicine(INT)</label>
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_med_tag">
+                <button type="action" name="act_med" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
             </span>
-            <input type="checkbox" name="attr_med_tag">
             <input type="number" name="attr_med value="0" min="0" title="@{med}">
 
-            <span>
+            <span class="disp">
                 <input type="radio" name="attr_discipline" value="${melee_weap}" title="@{discipline}">
                 <label>Melee Weapons(STR)</label>
             </span>
-            <input type="checkbox" name="attr_melee_weap_tag">
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_melee_weap_tag">
+                <button type="action" name="act_melee_weap" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_melee_weap" value="0" min="0" title="@{melee_weap}">
 
             <span>
                 <input type="radio" name="attr_discipline" value="${pilot}" title="@{discipline}">
                 <label>Pilot(PER)</label>
             </span>
-            <input type="checkbox" name="attr_pilot_tag">
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_pilot_tag">
+                <button type="action" name="act_pilot" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_pilot" value="0" min="0" title="@{pilot}">
 
             <span>
                 <input type="radio" name="attr_discipline" value="${repair}" title="@{discipline}">
                 <label>Repair(INT)</label>
             </span>
-            <input type="checkbox" name="attr_repair_tag">
+            <span class="custom-check">
+                <input type="history" value="0" class="toggle" name="attr_repair_tag">
+                <button type="action" name="act_repair" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_repair_rank" value="0" min="0" title="@{repair}">
 
             <span>
                 <input type="radio" name="attr_discipline" value="@{sci}" title="@{discipline}">
                 <label>Science(INT)</label>
             </span>
-            <input type="checkbox" name="attr_sci_tag">
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_sci_tag">
+                <button type="action" name="act_sci" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_sci" value="0" min="0" title="@{sci}">
 
             <span>
                 <input type="radio" name="attr_discipline" value="@{small_guns}" title="@{discipline}">
                 <label>Small Guns(AGI)</label>
             </span>
-            <input type="checkbox" name="attr_small_guns_tag">
+            <span class="custom-check">
+                <input type="hidden" value="0" class="toggle" name="attr_small_guns_tag">
+                <button type="action" name="act_small_guns" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_up.png?raw=true" alt=""></span>
+                    <span class="notchecked"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog_down.png?raw=true" alt=""></span>
+                </button>
+            </span>
             <input type="number" name="attr_small_guns" value="0" min="0" title="@{small_guns}">
 
             <span>
@@ -588,7 +647,24 @@
         })
     });
 
-    const toggleList=['ath'];
+    const toggleList=[
+        'ath',
+        'bar',
+        'big_guns',
+        'en_weap',
+        'explosives',
+        'lockpick',
+        'med',
+        'melee_weap',
+        'pilot',
+        'repair',
+        'small_guns',
+        'sneak',
+        'speech',
+        'surv',
+        'throw',
+        'unarmed'
+    ];
     toggleList.forEach(button=>{
         on(`clicked:${button}`,()=>{
             const flag = `${button}_tag`;
