@@ -1,3 +1,33 @@
+<div class="flex">
+    <div class="logo">
+        <img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/logo.png?raw=true" alt="falloutRPG Logo">
+    </div>
+    <div class="cell name">
+        <label for="charname" class="dark above">Character Name</label>
+        <input type="text" name="attr_character_name">
+        <label class="dark above">Current Luck</label>
+        <input type="number" name="attr_lp_current" value="5" max="@{lck}" step="1" class="max-width">
+    </div>
+    <div class="cell">
+        <div class="inline">
+            <label class="dark">XP Earned</label>
+            <input type="number" name="attr_xp_earned" value="0" class="max-width">
+        </div>
+        <div class="inline">
+            <label class="dark">XP To Next Level</label>
+            <input type="number" name="attr_xp_next" value="100" class="max-width">
+        </div>
+        <div class="inline">
+            <label class="dark">Origin</label>
+            <input type="text" name="attr_origin" class="max-width">
+        </div>
+        <div class="combo white">
+            <img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog.png?raw=true" alt="cog" class="mid">
+            <label>Level</label>
+            <input type="text" name="attr_level" value="1">
+        </div>
+    </div>
+</div>
 <div class="buttons">
     <button type="action" name="act_char">Character Info</button>
     <button type="action" name="act_equipment">Equipment</button>
@@ -6,208 +36,196 @@
 <input type="hidden" name="attr_sheetTab" class="sheet-tabstoggle" value="char">
 
 <div class="char">
-    <div class="flex">
-        <div class="cell">
-            <img src="./images/logo.png" alt="falloutRPG Logo">
-        </div>
-        <div class="cell name">
-            <label for="charname" class="dark above">Character Name</label>
-            <input type="text" name="attr_character_name">
-        </div>
-        <div class="cell">
-            <div class="inline"><label class="dark">XP Earned</label><input type="text" name="attr_xp_earned"></div>
-            <div class="inline"><label class="dark">XP To Next Level</label><input type="text" name="attr_xp_next"></div>
-            <div class="inline"><label class="dark">Origin</label><input type="text" name="attr_origin"></div>
-            <div class="combo white">
-                <img src="./images/cog.png" alt="cog" class="mid">
-                <label>Level</label>
-                <input type="text" name="attr_level">
-            </div>
-        </div>
-    </div>
     <div class="flex attrs">
+        <input type="hidden" name="attr_attributeName" value="str">
         <div class="attr_cell">
-            <div class="label">Strength</div>
-            <input type="text" name="attr_str">
+            <input type="radio" name="attr_attribute" value="@{str}" title="@{attribute}" checked="checked">
+            <label>Strength</label>
+            <input type="number" name="attr_str" value="5" title="@{str}">
         </div>
         <div class="attr_cell">
-            <div class="label">Perception</div>
-            <input type="text" name="attr_per">
+            <input type="radio" name="attr_attribute" value="@{per}" title="${attribute}">
+            <label>Perception</label>
+            <input type="number" name="attr_per" value="5" title="@{per}">
         </div>
         <div class="attr_cell">
-            <div class="label">Endurance</div>
-            <input type="text" name="attr_str">
+            <input type="radio" name="attr_attribute" value="@{end}" title="${attribute}">
+            <label>Endurance</label>
+            <input type="number" name="attr_end" value="5" title="@{end}">
         </div>
         <div class="attr_cell">
-            <div class="label">Charisma</div>
-            <input type="text" name="attr_cha">
+            <input type="radio" name="attr_attribute" value="@{cha}" title="${attribute}">
+            <label>Charisma</label>
+            <input type="number" name="attr_cha" value="5" title="@{cha}">
         </div>
         <div class="attr_cell">
-            <div class="label">Intelligence</div>
-            <input type="text" name="attr_int">
+            <input type="radio" name="attr_attribute" value="@{int}" title="${attribute}">
+            <label>Intelligence</label>
+            <input type="number" name="attr_int" value="5" title="@{int}">
         </div>
         <div class="attr_cell">
-            <div class="label">Agility</div>
-            <input type="text" name="attr_agi">
+            <input type="radio" name="attr_attribute" value="@{per}" title="${agi}">
+            <label>Agility</label>
+            <input type="number" name="attr_agi" value="5" title="@{agi}">
         </div>
         <div class="attr_cell">
-            <div class="label">Luck</div>
-            <input type="text" name="attr_lck">
-            <label>Luck Points</label>
-            <input type="number" name="attr_lp_current">
+            <input type="radio" name="attr_attribute" value="@{lck}" title="${attribute}">
+            <label>Luck</label>
+            <input type="number" name="attr_lck" value="5" title="@{lck}">
         </div>
     </div>
-    <div class="row">
-        <div class="skills">
-            <table>
-                <thead>
-                    <th>Name</th>
-                    <th>Tag</th>
-                    <th>Rank</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Athletics(STR)</td>
-                        <td><input type="checkbox" name="attr_ath_tag"></td>
-                        <td>
-                            <input type="number" name="attr_ath_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Barter(CHA)</td>
-                        <td><input type="checkbox" name="attr_bar_tag"></td>
-                        <td>
-                            <input type="number" name="attr_bar_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Big Guns(END)</td>
-                        <td><input type="checkbox" name="attr_big_guns_tag"></td>
-                        <td>
-                            <input type="number" name="attr_big_guns_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Energy Weapons(PER)</td>
-                        <td><input type="checkbox" name="attr_en_weap_tag"></td>
-                        <td>
-                            <input type="number" name="attr_en_weap_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Explosives(PER)</td>
-                        <td><input type="checkbox" name="attr_explosives_tag"></td>
-                        <td>
-                            <input type="number" name="attr_explosives_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Lockpick(PER)</td>
-                        <td><input type="checkbox" name="attr_lockpick_tag"></td>
-                        <td>
-                            <input type="number" name="attr_lockpick_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Medicine(INT)</td>
-                        <td><input type="checkbox" name="attr_med_tag"></td>
-                        <td>
-                            <input type="number" name="attr_med_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Melee Weapons(STR)</td>
-                        <td><input type="checkbox" name="attr_melee_weap_tag"></td>
-                        <td>
-                            <input type="number" name="attr_melee_weap_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pilot(PER)</td>
-                        <td><input type="checkbox" name="attr_pilot_tag"></td>
-                        <td>
-                            <input type="number" name="attr_pilot_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Repair(INT)</td>
-                        <td><input type="checkbox" name="attr_repair_tag"></td>
-                        <td>
-                            <input type="number" name="attr_repair_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Science(INT)</td>
-                        <td><input type="checkbox" name="attr_sci_tag"></td>
-                        <td>
-                            <input type="number" name="attr_sci_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Small Guns(AGI)</td>
-                        <td><input type="checkbox" name="attr_small_guns_tag"></td>
-                        <td>
-                            <input type="number" name="attr_small_guns_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Sneak(AGI)</td>
-                        <td><input type="checkbox" name="attr_sneak_tag"></td>
-                        <td>
-                            <input type="number" name="attr_sneak_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Speech(CHA)</td>
-                        <td><input type="checkbox" name="attr_speech_tag"></td>
-                        <td>
-                            <input type="number" name="attr_speech_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Survival(END)</td>
-                        <td><input type="checkbox" name="attr_surv_tag"></td>
-                        <td>
-                            <input type="number" name="attr_surv_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Throwing(AGI)</td>
-                        <td><input type="checkbox" name="attr_throw_tag"></td>
-                        <td>
-                            <input type="number" name="attr_throw_rank">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Unarmed(STR)</td>
-                        <td><input type="checkbox" name="attr_unarmed_tag"></td>
-                        <td>
-                            <input type="number" name="attr_unarmed_rank">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    <div>
+        <div class="grid skillgridhead">
+            <div>Name</div>
+            <div class="text-center">Tag</div>
+            <div class="text-center">Rank</div>
+            <input type="hidden" name="attr_disciplineName" value="ath">
+        </div>
+        <div class="grid skillgrid">
+            
+            <input type="radio" name="attr_discipline" value="@{ath}" title="@{discipline}" checked="checked">
+            <label>Athletics(STR)</label>
+            <span class="custom-check">
+                <input type="hidden" name="attr_ath_tag" value="1" class="toggle">
+                <button type="action" name="act_ath" class="toggle">
+                    <span class="checkmark"><img src="https://github.com/AshenPheonix/roll20_fallout_2d20_rpg/blob/main/images/cog.png?raw=true" alt=""></span>
+                </button>
+            </span>
+            <input type="number" name="attr_ath" value="0" min="0" title="@{ath}">
+
+            <input type="radio" name="attr_discipline" value="@{bar}" title="@{discipline}">
+            <label>Barter(CHA)</label>
+            <input type="checkbox" name="attr_bar_tag">
+            <input type="number" name="attr_bar" value="0" min="0" title="${bar}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="@{big_guns}" title="@{discipline}">
+                <label>Big Guns(END)</label>
+            </span>
+            <input type="checkbox" name="attr_big_guns_tag">
+            <input type="number" name="attr_big_guns" value="0" min="0" title="@{big_guns}">
+            
+            <span>
+                <label>Energy Weapons(PER)</label>
+                <input type="radio" name="attr_discipline" value="@{en_weap}" title="@{discipline}">
+            </span>
+            <input type="checkbox" name="attr_en_weap_tag">
+            <input type="number" name="attr_en_weap" value="0" min="0" title="@{en_weap}">
+            
+            <span>
+                <input type="radio" name="attr_discipline" value="@{explosives}" title="@{discipline}">
+                <label>Explosives(PER)</label>
+            </span>
+            <input type="checkbox" name="attr_explosives_tag">
+            <input type="number" name="attr_explosives" value="0" min="0" title="${explosives}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="@{lockpick}" title="@{discipline}">
+                <label>Lockpick(PER)</label>
+            </span>
+            <input type="checkbox" name="attr_lockpick_tag">
+            <input type="number" name="attr_lockpick" value="0" min="0" title="@{lockpick}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="@{med}" title="@{discipline}">
+                <label>Medicine(INT)</label>
+            </span>
+            <input type="checkbox" name="attr_med_tag">
+            <input type="number" name="attr_med value="0" min="0" title="@{med}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="${melee_weap}" title="@{discipline}">
+                <label>Melee Weapons(STR)</label>
+            </span>
+            <input type="checkbox" name="attr_melee_weap_tag">
+            <input type="number" name="attr_melee_weap" value="0" min="0" title="@{melee_weap}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="${pilot}" title="@{discipline}">
+                <label>Pilot(PER)</label>
+            </span>
+            <input type="checkbox" name="attr_pilot_tag">
+            <input type="number" name="attr_pilot" value="0" min="0" title="@{pilot}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="${repair}" title="@{discipline}">
+                <label>Repair(INT)</label>
+            </span>
+            <input type="checkbox" name="attr_repair_tag">
+            <input type="number" name="attr_repair_rank" value="0" min="0" title="@{repair}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="@{sci}" title="@{discipline}">
+                <label>Science(INT)</label>
+            </span>
+            <input type="checkbox" name="attr_sci_tag">
+            <input type="number" name="attr_sci" value="0" min="0" title="@{sci}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="@{small_guns}" title="@{discipline}">
+                <label>Small Guns(AGI)</label>
+            </span>
+            <input type="checkbox" name="attr_small_guns_tag">
+            <input type="number" name="attr_small_guns" value="0" min="0" title="@{small_guns}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="@{sneak}" title="@{discipline}">
+                <label>Sneak(AGI)</label>
+            </span>
+            <input type="checkbox" name="attr_sneak_tag">
+            <input type="number" name="attr_sneak" value="0" min="0" title="@{sneak}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="@{speech}" title="@{discipline}">
+                <label>Speech(CHA)</label>
+            </span>
+            <input type="checkbox" name="attr_speech_tag">
+            <input type="number" name="attr_speech" value="0" min="0" title="@{speech}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="@{surv}" title="@{discipline}">
+                <label>Survival(END)</label>
+            </span>
+            <input type="checkbox" name="attr_surv_tag">
+            <input type="number" name="attr_surv" value="0" min="0" title="@{surv}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="@{throw}" title="@{discipline}">
+                <label>Throwing(AGI)</label>
+            </span>
+            <input type="checkbox" name="attr_throw_tag">
+            <input type="number" name="attr_throw" value="0" min="0" title="@{throw}">
+
+            <span>
+                <input type="radio" name="attr_discipline" value="@{unarmed}" title="@{discipline}">
+                <label>Unarmed(STR)</label>
+            </span>
+            <input type="checkbox" name="attr_unarmed_tag">
+            <input type="number" name="attr_unarmed" value="0" min="0">
         </div>
         <div class="combat">
-            <div class="dirived">
+            <div class="derived flex">
                 <div class="cell">
                     <label>Melee Damage</label>
-                    <input type="number" name="attr_melee_dam">
+                    <input type="number" name="attr_melee_disp" value="@{melee_dam}" disabled>
+                    <input type="hidden" name="attr_melee_dam" value="0">
                 </div>
                 <div class="cell">
                     <label>Defense</label>
-                    <input type="number" name="attr_def">
+                    <input type="number" name="attr_def_disp" value="@{def}" disabled>
+                    <input type="hidden" name="attr_def" value="1">
                 </div>
                 <div class="cell">
                     <label>Initiative</label>
-                    <input type="number" name="attr_init">
+                    <input type="number" name="attr_init_disp" value="@{init}" disabled>
+                    <input type="hidden" name="attr_init" value=10;>
                 </div>
             </div>
             <div class="damage">
-                <div class="all">
-                    <div class="poi black inset-combo">
+                <div class="all flex">
+                    <div class="poi flex">
                         <label>Poison DR</label>
-                        <input type="number" name="attr_poison_dr">
+                        <input type="number" name="attr_poison_dr" value="0">
                     </div>
                     <div class="set">
                         <table>
@@ -218,17 +236,17 @@
                                 <tr>
                                     <td class="green">Phys DR</td>
                                     <td>
-                                        <input type="number" name="attr_head_phys">
+                                        <input type="number" name="attr_head_phys" value="0">
                                     </td>
                                     <td class="green">Rad DR</td>
                                     <td>
-                                        <input type="number" name="attr_head_rad">
+                                        <input type="number" name="attr_head_rad" value="0">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="green">En. DR</td>
                                     <td>
-                                        <input type="number" name="attr_head_en">
+                                        <input type="number" name="attr_head_en" value="0">
                                     </td>
                                     <td class="green"></td>
                                     <td>
@@ -240,13 +258,17 @@
                     </div>
                     <div class="health">
                         <div class="black">Health</div>
-                        <label class="inset">Maximum HP</label>
-                        <input type="number" name="attr_max_health">
-                        <label class="inset">Current HP</label>
-                        <input type="number" name="attr_curr_health">
+                        <div class="flex healthblock">
+                            <label class="inset">Maximum HP</label>
+                            <input type="number" name="attr_health_max" value="10">
+                        </div>
+                        <div class="flex healthcur">
+                            <label class="inset">Current HP</label>
+                            <input type="number" name="attr_health" value="10" max="@{health_max}">
+                        </div>
                     </div>
                 </div>
-                <div class="wide">
+                <div class="wide flex">
                     <div class="set">
                         <table>
                             <thead>
@@ -255,13 +277,13 @@
                             <tbody>
                                 <tr>
                                     <td class="green">Phys DR</td>
-                                    <td><input type="number" name="attr_left_arm_phys"></td>
+                                    <td><input type="number" name="attr_left_arm_phys" value="0"></td>
                                     <td class="green">Rad. DR</td>
-                                    <td><input type="number" name="attr_left_arm_rad"></td>
+                                    <td><input type="number" name="attr_left_arm_rad" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td class="green">En. DR</td>
-                                    <td><input type="number" name="attr_left_arm_en"></td>
+                                    <td><input type="number" name="attr_left_arm_en" value="0"></td>
                                     <td class="green">Injury</td>
                                     <td><input type="checkbox" name="attr_left_arm_inj"></td>
                                 </tr>
@@ -278,13 +300,13 @@
                             <tbody>
                                 <tr>
                                     <td class="green">Phys DR</td>
-                                    <td><input type="number" name="attr_right_arm_phys"></td>
+                                    <td><input type="number" name="attr_right_arm_phys" value="0"></td>
                                     <td class="green">Rad. DR</td>
-                                    <td><input type="number" name="attr_right_arm_rad"></td>
+                                    <td><input type="number" name="attr_right_arm_rad" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td class="green">En. DR</td>
-                                    <td><input type="number" name="attr_right_arm_en"></td>
+                                    <td><input type="number" name="attr_right_arm_en" value="0"></td>
                                     <td class="green">Injury</td>
                                     <td><input type="checkbox" name="attr_right_arm_inj"></td>
                                 </tr>
@@ -292,7 +314,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="center">
+                <div class="center flex">
                     <div class="set">
                         <table>
                             <thead>
@@ -303,13 +325,13 @@
                             <tbody>
                                 <tr>
                                     <td class="green">Phys DR</td>
-                                    <td><input type="number" name="attr_torso_phys"></td>
+                                    <td><input type="number" name="attr_torso_phys" value="0"></td>
                                     <td class="green">Rad. DR</td>
-                                    <td><input type="number" name="attr_torso_rad"></td>
+                                    <td><input type="number" name="attr_torso_rad" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td class="green">En. DR</td>
-                                    <td><input type="number" name="attr_torso_en"></td>
+                                    <td><input type="number" name="attr_torso_en" value="0"></td>
                                     <td class="green">Injury</td>
                                     <td><input type="checkbox" name="attr_torso_inj"></td>
                                 </tr>
@@ -317,7 +339,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="wide">
+                <div class="wide flex">
                     <div class="set">
                         <table>
                             <thead>
@@ -328,13 +350,13 @@
                             <tbody>
                                 <tr>
                                     <td class="green">Phys DR</td>
-                                    <td><input type="number" name="attr_left_leg_phys"></td>
+                                    <td><input type="number" name="attr_left_leg_phys" value="0"></td>
                                     <td class="green">Rad. DR</td>
-                                    <td><input type="number" name="attr_left_leg_rad"></td>
+                                    <td><input type="number" name="attr_left_leg_rad" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td class="green">En. DR</td>
-                                    <td><input type="number" name="attr_left_leg_en"></td>
+                                    <td><input type="number" name="attr_left_leg_en" value="0"></td>
                                     <td class="green">Injury</td>
                                     <td><input type="checkbox" name="attr_left_leg_inj"></td>
                                 </tr>
@@ -351,13 +373,13 @@
                             <tbody>
                                 <tr>
                                     <td class="green">Phys DR</td>
-                                    <td><input type="number" name="attr_right_leg_phys"></td>
+                                    <td><input type="number" name="attr_right_leg_phys" value="0"></td>
                                     <td class="green">Rad. DR</td>
-                                    <td><input type="number" name="attr_right_leg_rad"></td>
+                                    <td><input type="number" name="attr_right_leg_rad" value="0"></td>
                                 </tr>
                                 <tr>
                                     <td class="green">En. DR</td>
-                                    <td><input type="number" name="attr_right_leg_en"></td>
+                                    <td><input type="number" name="attr_right_leg_en" value="0"></td>
                                     <td class="green">Injury</td>
                                     <td><input type="checkbox" name="attr_right_leg_inj"></td>
                                 </tr>
@@ -367,62 +389,72 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="flex">
         <div class="weapons">
             <h4>Weapons</h4>
             <fieldset class="repeating_weapons">
-                <div class="weaponset">
-                    <label>name</label>
-                    <input type="text" name="attr_weaponname">
-                </div>
-                <div class="weaponset">
-                    <label>name</label>
-                    <select name="attr_weaponskill">
-                        <option value="big">Big Guns</option>
-                        <option value="en">Energy Weapons</option>
-                        <option value="ex">Explosives</option>
-                        <option value="melee">Melee Weapons</option>
-                        <option value="small">Small Guns</option>
-                        <option value="throw">Throwing</option>
-                        <option value="unarmed">Unarmed</option>
-                    </select>
-                </div>
-                <div class="weaponset">
-                    <label>Tag</label>
-                    <input type="checkbox" name="attr_weapontag">
-                </div>
-                <div class="weaponset">
-                    <label>Damage</label>
-                    <input type="checkbox" name="attr_weapontag">
-                </div>
-                <div class="weaponset">
-                    <label>Effects</label>
-                    <textarea name="attr_effect" cols="30" rows="2"></textarea>
-                </div>
-                <div class="weaponset">
-                    <label>Dam. Type</label>
-                    <select name="attr_damtype">
-                        <option value="phys">Physical</option>
-                        <option value="en">Energy</option>
-                        <option value="rad">Radiation</option>
-                        <option value="poi">Poison</option>
-                        <option value="spec">Special</option>
-                    </select>
-                </div>
-                <div class="weaponset">
-                    <label>Rate</label>
-                    <input type="number" name="attr_firerate">
-                </div>
-                <div class="weaponset">
-                    <label>Qualities</label>
-                    <textarea name="attr_weapqualities" cols="30" rows="2"></textarea>
-                </div>
-                <div class="weaponset">
-                    <label>Ammo</label>
-                    <input type="text" name="attr_ammotype">
-                </div>
-                <div class="weaponset">
-                    <label>Weight</label>
-                    <input type="number" name="attr_weight">
+                <div class="flex column item">
+                    <div class="flex">
+                        <div class="weaponset">
+                            <label>Name</label>
+                            <input type="text" name="attr_weaponname">
+                        </div>
+                        <div class="weaponset">
+                            <label>Type</label>
+                            <select name="attr_weaponskill">
+                                <option value="big">Big Guns</option>
+                                <option value="en">Energy Weapons</option>
+                                <option value="ex">Explosives</option>
+                                <option value="melee">Melee Weapons</option>
+                                <option value="small">Small Guns</option>
+                                <option value="throw">Throwing</option>
+                                <option value="unarmed">Unarmed</option>
+                            </select>
+                        </div>
+                        <div class="weaponset">
+                            <label>Tag</label>
+                            <input type="checkbox" name="attr_weapontag">
+                        </div>
+                        <div class="weaponset">
+                            <label>Damage</label>
+                            <input type="number" name="attr_weapondamage" value="0">
+                        </div>
+                        <div class="weaponset">
+                            <label>Effects</label>
+                            <textarea name="attr_effect" cols="30" rows="2"></textarea>
+                        </div>
+                    </div>
+                    <div class="flex">
+
+                        <div class="weaponset">
+                            <label>Dam. Type</label>
+                            <select name="attr_damtype">
+                                <option value="phys">Physical</option>
+                                <option value="en">Energy</option>
+                                <option value="rad">Radiation</option>
+                                <option value="poi">Poison</option>
+                                <option value="spec">Special</option>
+                            </select>
+                        </div>
+                        <div class="weaponset">
+                            <label>Rate</label>
+                            <input type="number" name="attr_firerate">
+                        </div>
+                        <div class="weaponset">
+                            <label>Qualities</label>
+                            <textarea name="attr_weapqualities" cols="30" rows="2"></textarea>
+                        </div>
+                        <div class="weaponset ammo">
+                            <label>Ammo</label>
+                            <input type="text" name="attr_ammotype">
+                        </div>
+                        <div class="weaponset">
+                            <label>Weight</label>
+                            <input type="number" name="attr_weight">
+                        </div>
+                        <button type="action" name="act_fire">Use</button>
+                    </div>
                 </div>
             </fieldset>
         </div>
@@ -432,11 +464,12 @@
 <div class="equipment">
     <div class="flex">
         <div class="bags">
-            <div class="caps">
+            <div class="caps flex">
                 <label>Caps</label>
                 <input type="number" name="attr_caps">
             </div>
             <div class="ammo">
+                <h4>Ammo Bag</h4>
                 <fieldset class="repeating_ammobag">
                     <label>Type</label>
                     <input type="text" name="attr_ammotype">
@@ -444,7 +477,8 @@
                     <input type="number" name="attr_ammocount">
                 </fieldset>
             </div>
-            <div class="equipment">
+            <div class="itembag">
+                <h4>Equipment and Items</h4>
                 <fieldset class="repeating_equipment">
                     <label>Name</label>
                     <input type="text" name="attr_itemname">
@@ -457,45 +491,43 @@
                 </div>
                 <div class="total">
                     <label>Total Carry Weight</label>
-                    <input type="number" name="attr_total_carry">
+                    <input type="number" name="attr_total_carry" value="200">
                 </div>
             </div>
         </div>
-        <div class="perks">
+        <div class="perks flex column">
             <h4>
                 Perks & Traits
             </h4>
-            <div class="table">
-                <div class="thead">
-                    <div class="tr">
-                        <div class="p_name">
-                            Name
-                        </div>
-                        <div class="p_rank">
-                            Rank
-                        </div>
-                        <div class="p_effect">
-                            Effect
-                        </div>
-                    </div>
+            <div class="grid perkgrid head">
+                <div class="p_name">
+                    Name
                 </div>
-                <fielset class="repeating_perks tr">
-                    <div class="p_name">
+                <div class="p_rank">
+                    Rank
+                </div>
+                <div class="p_effect">
+                    Effect
+                </div>
+            </div>
+            <fieldset class="repeating_perks">
+                <div class="grid perkgrid">
+                    <div class="p_name flex fill">
                         <input type="text" name="attr_perkname">    
                     </div>
-                    <div class="p_rank">
+                    <div class="p_rank flex fill">
                         <input type="number" name="attr_perkrank">
                     </div>
-                    <div class="p_effect">
-                        <textarea name="attr_perkeffect" cols="30" rows="10"></textarea>
+                    <div class="p_effect flex fill">
+                        <textarea name="attr_perkeffect" cols="30" rows="3"></textarea>
                     </div>
-                </fielset>
-            </div>
+                </div>
+            </fieldset>
         </div>
     </div>
 </div>
 
-<div class="journal">
+<div class="jour">
     <div class="j_sect">
         <label>Notes</label>
         <textarea name="attr_charnotes"cols="30" rows="10"></textarea>
@@ -508,10 +540,62 @@
 
 <script type="text/worker">
     const buttonList=['char', 'jour', 'equipment'];
-    buttonlist.forEach(button => {
+    buttonList.forEach(button => {
         on(`clicked:${button}`, ()=>{
             setAttrs({
                 sheetTab: button
+            });
+        });
+    });
+
+    on('change:str', e => {
+        console.log('here: ',e.newValue)
+        getAttrs(['str'], e =>{
+            const {str} = e;
+            if(str < 7){
+                setAttrs({
+                    melee_dam:0
+                })
+            }else if(str < 9) {
+                setAttrs({
+                    melee_dam:1
+                })
+            }else if(str < 11){
+                setAttrs({
+                    melee_dam:2
+                })
+            } else {
+                setAttrs({
+                    melee_dam:3
+                })
+            }
+        })
+    });
+
+    on('change:agi change:per', e => {
+        getAttrs(['agi','per'], stats => {
+            let {agi, per} = stats;
+            let def = 0;
+            if (agi < 9){
+                def = 1;
+            } else {
+                def = 2;
+            }
+            setAttrs({
+                def,
+                init:parseInt(agi)+parseInt(per)
+            })
+        })
+    });
+
+    const toggleList=['ath'];
+    toggleList.forEach(button=>{
+        on(`clicked:${button}`,()=>{
+            const flag = `${button}_tag`;
+            getAttrs([flag], v=>{
+                setAttrs({
+                    [flag]:v[flag]!== "1" ? "1" : "0"
+                })
             })
         })
     })

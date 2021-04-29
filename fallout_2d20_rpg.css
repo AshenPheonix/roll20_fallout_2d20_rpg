@@ -1,12 +1,358 @@
-.sheet-char,
-.sheet-equipment,
-.sheet-jour{
+*{
+    box-sizing: border-box;
+}
+.char,
+.equipment,
+.jour{
     display: none;
 }
 
-.sheet-tabstoggle[value="char"] ~ div.sheet-char,
-.sheet-tabstoggle[value="equipment"] ~ div.sheet-equipment,
-.sheet-tabstoggle[value="jour"] ~ div.sheet-jour {
+.sheet-tabstoggle[value="char"] ~ div.char,
+.sheet-tabstoggle[value="equipment"] ~ div.equipment,
+.sheet-tabstoggle[value="jour"] ~ div.jour {
     display: block;
+    width:100%;
 }
 
+.flex {
+    display:flex;
+    width:100%;
+}
+.cell {
+    margin:0 1rem;
+    width:33%;
+}
+.cell label {
+    width:100%;
+    color:white;
+    background-color: black;
+    margin:0;
+    padding:0;
+}
+.cell input{
+    width: 100%;
+    margin-bottom: .5rem;
+}
+.combo {
+    position: absolute;
+    right:8rem;
+    top:8rem;
+}
+.combo img {
+    z-index: 2;
+}
+
+.combo input {
+    z-index:3;
+    border: 0;
+    position: absolute;
+    background-color: transparent;
+    right: -3.3rem;
+    top: 3rem;
+    font-size: xx-large;
+}
+.combo label {
+    position:absolute;
+    top:1.5rem;
+    right: -2.8rem;
+    background-color: transparent;
+    color: black;
+}
+.sub-cell{
+    position: relative;
+    right:0px;
+    top: 0px;
+    width:25%;
+    height: 25%;
+}
+
+.inline * {
+    width: 100%;
+    padding-bottom:.5rem;
+}
+.inline label {
+    margin-bottom: 0;
+    padding:0;
+}
+.max-width {
+    width: 100% !important;
+}
+
+.attrs {
+    margin:1rem 0;
+}
+
+.attr_cell {
+    width:calc(100%/7);
+}
+.attr_cell input {
+    margin: 0 auto;
+}
+.text-center {
+    text-align: center !important;
+}
+
+.skills table thead th{
+    background-color: black;
+    color: white;
+}
+.skills table tbody tr:nth-of-type(odd){
+    background-color: #f5d7ba;
+}
+.skills table tbody tr:nth-of-type(even){
+    background-color: #fbeadd;
+}
+td input[type="checkbox"] {
+    margin: 0 auto;
+}
+.skills table tbody tr td:nth-child(3) input{
+    width: 100%;
+    margin:0 0 0 1rem;
+    padding:0;
+}
+
+.skills table tbody tr td:first-child{
+    width:20rem;
+}
+
+.skills table tbody tr td:nth-child(2){
+    width:2rem;
+}
+
+.column {
+    flex-direction: column;
+}
+.flex .skills {
+    width:33%;
+    margin:0;
+}
+.flex .combat {
+    width:67%;
+    margin:0;
+}
+.derived {
+    margin:0;
+    padding:0;
+}
+.combat label{
+    color:white;
+    background-color: black;
+    margin:0;
+    text-align: center !important;
+}
+.poi *{
+    margin:0;
+    height: 1.8rem !important;
+}
+.poi label{
+    max-width: 10rem;
+}
+.poi {
+    width:fit-content !important;
+}
+.all {
+    justify-content: space-between;
+    margin:1rem 0;
+}
+.set th{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.set tr:nth-child(2) {
+    color:black;
+    background-color: #c5d3c5;
+}
+.set tr:first-child{
+    color:black;
+    background-color: #dce4dd;
+}
+
+.wide {
+    justify-content: space-between;
+}
+
+.center {
+    justify-content: center;
+}
+
+.center, .wide {
+    margin: 1rem 0;
+}
+
+.damage {
+    margin-left: 1rem;
+    margin-right:0;
+}
+
+.health .black {
+    color: white;
+    background-color: black;
+}
+.healthblock label{
+    font-size: 1rem;
+    color:black;
+    background-color: white;
+    margin-right:0;
+}
+.healthblock input {
+    border-left: 0;
+    margin-left:0;
+}
+
+.healthcur label{
+    font-size: 1rem;
+    color:black;
+    background-color: white;
+    margin-right:0;
+}
+.healthcur input{
+    border-left:0;
+    margin-left:0;
+}
+.healthblock{
+    border-bottom: dotted 1px black;
+}
+.healthcur{
+    border-bottom: solid black 1px;
+}
+.healthblock, .healthcur {
+    height: 2rem;
+    border-right:solid black 1px;
+    border-left: solid black 1px;
+}
+
+.weaponset select{
+    width:fit-content;
+}
+.weaponset {
+    margin:1rem;
+}
+.weaponset textarea {
+    height:4rem !important;
+}
+.ammo input{
+    width:10rem;
+}
+.item{
+    border: solid black 1px;
+}
+
+.bags{
+    width:33%;
+}
+.current, .total{
+    display: flex;
+    width: 100%;
+}
+.current{
+    border-bottom: white dotted 1px;
+}
+.current label, .total label{
+    text-align: right;
+    color: white;
+    background-color: black;
+    padding:1rem 1.5rem;
+    margin: 0;
+    font-size:1.2rem;
+}
+
+.current input, .total input {
+    margin-right:0;
+}
+
+.perks{
+    width: 75%;
+    margin-left:1rem;
+}
+
+.p_name, .p-rank, .p_effect{
+    text-align: left;
+}
+.perkgrid{
+    grid-template-columns: 20rem 4.5rem 45rem;
+    border: 1px black groove;
+}
+.p_effect{
+    height:7rem !important;
+}
+.p_effect textarea{
+    height:100% !important;
+    width: 85% !important;
+    overflow: auto;
+    padding:0;
+    border:0;
+    margin: 0;
+}
+.grid{
+    display: grid;
+}
+.p_name input{
+    width:100%;
+    margin:0;
+    border:0;
+}
+.p_rank input{
+    width:100% !important;
+    margin:0;
+    border:0;
+}
+.perkgrid.head{
+    height:2.5rem;
+}
+.p_name,.p_rank{
+    border-right: 1px black groove;
+}
+.fill{
+    flex:1;
+}
+.bags > *{
+    border:groove 1px black;
+}
+.equipment{
+    margin-top: 2rem;
+}
+.caps > input{
+    width:5rem !important;
+}
+.skillgrid {
+    grid-template-columns: 20rem 3rem 3.5rem;
+}
+.skillgridhead{
+    grid-template-columns: 20rem 2rem 3.5rem;
+}
+.skillgrid > * {
+    height:3rem;
+    border:groove black 1px;
+    width:max-content;
+}
+.skillgrid>input[type=number]{
+    height:3rem !important;
+}
+.skillgrid>input[type=radio]{
+    display: none;
+}
+
+.custom-check{
+    display: block;
+    position: relative;
+}
+.custom-check button{
+    padding:0;
+    border:solid 1px blue;
+    cursor: pointer;
+
+    width: 2.9rem;
+    height: 2.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-check input.toggle:not([value="1"]) ~ button > span{
+    display: none;
+}
+.skillgrid label{
+    display: flex;
+    align-items: center;
+}
